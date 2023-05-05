@@ -2,7 +2,7 @@ import streamlit as st
 from PIL import Image
 from streamlit.components.v1 import components
 
-image = Image.open("assets/PicUCA.jpg")
+image = Image.open("assets/PicUca.jpg")
 
 st.header("💻 Work Experience")
 
