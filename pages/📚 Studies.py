@@ -86,5 +86,5 @@ with st.expander("Languages"):
              "is also giving my the chance to learn French for everyday life.")
 #     displayPdf(
 #         "assets/CAptis_FranciscoAlonso.pdf")
-        image = Image.open("assets/CAptis_FranciscoAlonso.jpg")
-        st.image(image, caption="English certificate")
+    image = Image.open("assets/CAptis_FranciscoAlonso.jpg")
+    st.image(image, caption="English certificate")
