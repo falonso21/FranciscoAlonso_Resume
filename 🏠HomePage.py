@@ -61,4 +61,8 @@ class="badge-base__link LI-simple-link" href="https://in.linkedin.com/in/francis
 
 with st.sidebar:
     components.html(embed_component['linkedin'], height=310)
+    
+st.sidebar.info("Please note that this application has been developed with Python, specifically with the Streamlit "
+                "library. Please find the code in my [GitHub](https://github.com/falonso21/FranciscoAlonso_Resume) "
+                "repository.")
 
