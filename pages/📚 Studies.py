@@ -1,8 +1,8 @@
-import base64
 import streamlit as st
 import extra_streamlit_components as stx
 from PIL import Image
 
+# test commit
 # --- AUXILIAR FUNCTIONS ---
 # def displayPdf(path):
 #     with open(path, "rb") as f:
