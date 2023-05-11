@@ -1,4 +1,5 @@
-altair.vegalite.v4
+altair
+vega_datasets 
 Pillow==9.2.0
 streamlit==1.12.0
 streamlit_timeline==0.0.2
