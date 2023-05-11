@@ -1,20 +1,18 @@
 import base64
 import streamlit as st
 import extra_streamlit_components as stx
-from streamlit.components.v1 import components
-import os
-
+from PIL import Image
 
 # --- AUXILIAR FUNCTIONS ---
-def displayPdf(path):
-    with open(path, "rb") as f:
-        base64_pdf = base64.b64encode(f.read()).decode('utf-8')
+# def displayPdf(path):
+#     with open(path, "rb") as f:
+#         base64_pdf = base64.b64encode(f.read()).decode('utf-8')
 
-    # Embedding PDF in HTML
-    pdf_display = F'<iframe src="data:application/pdf;base64,{base64_pdf}" width="650" height="1000" type="application/pdf"></iframe>'
+#     # Embedding PDF in HTML
+#     pdf_display = F'<iframe src="data:application/pdf;base64,{base64_pdf}" width="650" height="1000" type="application/pdf"></iframe>'
 
-    # Displaying File
-    st.markdown(pdf_display, unsafe_allow_html=True)
+#     # Displaying File
+#     st.markdown(pdf_display, unsafe_allow_html=True)
 
 tfg_url = "https://rodin.uca.es/handle/10498/22099"
 coursera_url = "https://www.coursera.org/account/accomplishments/specialization/certificate/XWGQY77V8X4A"
@@ -45,10 +43,14 @@ with st.expander("Main studies"):
             stx.TabBarItemData(id=2, title="Recommendation Letter 2", description="Letter by Dr Shirin Moghaddam"),
         ], default=1)
         if chosen_id == "1":
-            displayPdf("assets/RecommendationLetterPhilipp.pdf")
+#             displayPdf("assets/RecommendationLetterPhilipp.pdf")
+            image = Image.open("assets/RecommendationLetterPhilipp.jpg")
+            st.image(image, caption="Recommendation Letter Philipp Hoevel")
 
         if chosen_id == "2":
-            displayPdf("assets/RecommendationLetterShirin.pdf")
+#             displayPdf("assets/RecommendationLetterShirin.pdf")
+            image = Image.open("assets/RecommendationLetterShirin.jpg")
+            st.image(image, caption="Recommendation Letter Shirin Moghaddam")
 
     with tab2:
         st.write("Once the bachelor was done and I was sure Data was my thing, I started to explore the possiblities where "
@@ -58,8 +60,11 @@ with st.expander("Main studies"):
                  "attached document).")
         st.write("This master also gave me the opportunity to learn from the best Data Scientists in Spain, the teaching staff were just outstanding. "
                  "Furthermore, the master clases about personal coaching were totally a plus.")
-        displayPdf(
-            "assets/Notas_máster_Francisco_Alonso.pdf")
+#         displayPdf(
+#             "assets/Notas_máster_Francisco_Alonso.pdf")
+        image = Image.open("assets/Notas_máster_Francisco_Alonso.jpg")
+        st.image(image, caption="Máster Afi Escuela Finanzas")
+
 
 with st.expander("Courses"):
     st.write("Once I discovered Data was gonna be the main part of my career, I took a couple of courses in order to be familiar "
@@ -79,5 +84,7 @@ with st.expander("Languages"):
              "masters and internships. So I got the C level by the British Council (see attached).")
     st.write("Then, my project working in Paris within an international environment is enhancing my professional English as it is the driving languge in the office, but in the other and "
              "is also giving my the chance to learn French for everyday life.")
-    displayPdf(
-        "assets/CAptis_FranciscoAlonso.pdf")
+#     displayPdf(
+#         "assets/CAptis_FranciscoAlonso.pdf")
+        image = Image.open("assets/CAptis_FranciscoAlonso.jpg")
+        st.image(image, caption="English certificate")
