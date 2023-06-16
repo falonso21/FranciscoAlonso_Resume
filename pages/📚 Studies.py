@@ -76,6 +76,8 @@ with st.expander("Courses"):
              "Structuring Machine Learning Projects, Convolutional Neural Networks and Sequence Models.")
     st.write("As well as the DL course and, more or less at the same time, I thought it was good idea to have some contact with other languages "
              "so I coursed [Become a Junior Java Software Developer.](https://www.udemy.com/certificate/UC-573af00a-cc0d-4a8a-a52a-2722f6ac952c/)")
+    st.write("I consider that a crucial part of the job of a person working in the data world is related to the presentation of results and storytelling. "
+             "That is why I also decided get a train in the [art of speaking and communicating](https://www.udemy.com/certificate/UC-0de689a8-5a85-4ada-a5fd-05f4947971ca/).")
 
 with st.expander("Languages"):
     st.write("There are two experiences in my life that have especially boosted my English level. The firt one was my Erasmus year in Ireland, "
