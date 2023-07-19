@@ -2,6 +2,7 @@ import streamlit as st
 from PIL import Image
 
 image = Image.open("assets/Iceland.jpg")
+image2 = Image.open("assets/Running.PNG")
 
 st.header("🧐 Interests")
 with st.expander("Philosophy"):
@@ -27,6 +28,7 @@ with st.expander("Sports"):
                 "sitting in front of the computer. That's why I try to spend my free time in motion. As a teenager I "
                 "used to play football for my hometown's team. Nowadays I love playing padel and running. My next goal? "
                 "The half-marathon of Paris!")
+    st.image(image2, caption="Adidas10K Paris")
 with st.expander("Travelling"):
     st.markdown("Probably the thing that motivates me the most. I guess you are never the same after Erasmus, and this "
                 "desire of adventure will stay with me. See a picture of my last road trip around Iceland!")
